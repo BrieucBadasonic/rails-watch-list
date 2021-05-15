@@ -1,6 +1,6 @@
 .card-movie {
   overflow: hidden;
-  height: 120px;
+  height: 416px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -9,7 +9,7 @@
 
 .card-movie img {
   height: 100%;
-  width: 120px;
+  width: 276px;
   object-fit: cover;
 }
 
@@ -27,6 +27,6 @@
   margin-top: 8px;
 }
 
-.card-movie .card-movie-infos {
+.card-movie .card--infos {
   padding: 16px;
 }

@@ -2,7 +2,6 @@
   background-size: cover;
   background-position: center;
   padding: 250px 0;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("cover.jpeg");
 }
 
 .banner-title {
@@ -11,4 +10,8 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 80px;
   font-weight: bold;
+}
+
+.banner-image {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("cover.jpeg");
 }
