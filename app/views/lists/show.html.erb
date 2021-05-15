@@ -7,15 +7,23 @@
 <div class="container">
   <h1 class="text-center mt-5"><%= @list.name %></h1>
   <%= link_to new_list_bookmark_path(@list) do %>
-    <p>Add a movie</p>
+    <p class="button-movie mb-3">Add a movie</p>
   <% end %>
 
   <% @list.movies.each do |movie| %>
+    <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
     <div class="card-movie">
       <%= image_tag "#{movie.poster_url}", alt: "poster" %>
       <div class="card-movie-infos">
-        <h2><%= movie.title %></h2>
-        <p><%= movie.overview %></p>
+        <div class="card-movie-title">
+          <strong><%= movie.title %> <span class="text-muted font-weight-normal">• <%= movie.rating %> <i class="fas fa-star star-yellow" style="color:#F7DA64"></i></span></strong>
+        </div>
+        <div class="card-movie-overview">
+          <p><%= movie.overview %></p>
+        </div>
+        <div class="card-movie-quote">
+          <i class="fas fa-quote-left mr-2"></i><small class="flex-grow-1"><%= bookmark.comment %></small>
+        </div>
       </div>
     </div>
   <% end %>
