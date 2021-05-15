@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="text-center mt-5"><%= @list.name %></h1>
+  <%= link_to new_list_bookmark_path(@list) do %>
+    <p>Add a movie</p>
+  <% end %>
+
+  <% @list.movies.each do |movie| %>
+    <div class="card-movie">
+      <%= image_tag "#{movie.poster_url}", alt: "poster" %>
+      <div class="card-movie-infos">
+        <h2><%= movie.title %></h2>
+        <p><%= movie.overview %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

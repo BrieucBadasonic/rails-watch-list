@@ -7,16 +7,18 @@
 <div class="container">
   <div class="row">
     <% @lists.each do |list| %>
-      <div class="col-lg-4 my-3">
-        <%= link_to list_path(list) do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-                                            url(<%= list.list_url %>)">
-            <p class="cocktail-card-name">
-              <%= list.name %>
-            </p>
-          </div>
-        <% end %>
-      </div>
+      <%= link_to list_path(list) do %>
+        <div class="col-lg-4 my-3">
+          <%= link_to list_path(list) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                                              url(<%= list.list_url %>)">
+              <p class="cocktail-card-name">
+                <%= list.name %>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
