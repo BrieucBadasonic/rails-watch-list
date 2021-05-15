@@ -3,6 +3,7 @@
   <hr>
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %>
+    <%= f.input :list_url, label: "Enter a URL for the picture of the list" %>
     <%= f.submit %>
   <% end %>
 

@@ -1,5 +1,22 @@
-<div class="container">
-  <h1 class="text-center mt-5">Movies Lists</h1>
-  <hr>
+<div class="banner">
+  <div class="container">
+    <h1 class="banner-title text-center">My watch list</h1>
+  </div>
+</div>
 
+<div class="container">
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-lg-4 my-3">
+        <%= link_to list_path(list) do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                                            url(<%= list.list_url %>)">
+            <p class="cocktail-card-name">
+              <%= list.name %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
