@@ -2,7 +2,7 @@
   <h1 class="text-center mt-5">Add a movie to the list "<%= @list.name %>"</h1>
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
-    <%= f.association :movie, prompt: "Select a movie" %>
+    <%= f.association :movie, collection: Movie.all.order(:title), prompt: "Select a movie", input_html: { class: 'select2' } %>
     <%= f.submit %>
   <% end %>
 </div>
