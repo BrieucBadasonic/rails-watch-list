@@ -36,3 +36,9 @@
   // align-items: center;
   height: 100%;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
